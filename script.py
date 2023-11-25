@@ -28,5 +28,16 @@ for player, words in player_to_words.items():
 
 print(player_to_points)
 
+def play_word(player, word):
+    player_to_words[player].append(word)
+
+def update_point_totals(player, word):
+    player_to_points[player] += score_word(word)
+
+play_word("player1", "CODE")
+update_point_totals("player1", "CODE")
+print(player_to_words)
+print(player_to_points)
+
 
 
